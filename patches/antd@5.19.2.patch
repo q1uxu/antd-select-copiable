@@ -1,0 +1,48 @@
+diff --git a/dist/antd-with-locales.js b/dist/antd-with-locales.js
+index f24d36e3a9f100c3e2281b69502a38b3524682b1..d29dee7e30daafd7e1ca1b98d40af6e020f696d7 100644
+--- a/dist/antd-with-locales.js
++++ b/dist/antd-with-locales.js
+@@ -114857,7 +114857,6 @@ const genBaseStyle = token => {
+         flex: 1,
+         fontWeight: 'normal',
+         position: 'relative',
+-        userSelect: 'none'
+       }, style.textEllipsis), {
+         // https://github.com/ant-design/ant-design/issues/40421
+         [`> ${antCls}-typography`]: {
+diff --git a/dist/antd.js b/dist/antd.js
+index 3e4d07f1de4b190a2cf5325c2695daaa1d5a72fb..e1caa6ce07f14a946a9039f8138382c92438fadb 100644
+--- a/dist/antd.js
++++ b/dist/antd.js
+@@ -100455,7 +100455,6 @@ const genBaseStyle = token => {
+         flex: 1,
+         fontWeight: 'normal',
+         position: 'relative',
+-        userSelect: 'none'
+       }, style.textEllipsis), {
+         // https://github.com/ant-design/ant-design/issues/40421
+         [`> ${antCls}-typography`]: {
+diff --git a/es/select/style/index.js b/es/select/style/index.js
+index ec2633faa846db16591b7a7e510788dc7ad98c8f..bb6171634419779c5a9dac5fe024ea86f1b62ac7 100644
+--- a/es/select/style/index.js
++++ b/es/select/style/index.js
+@@ -74,7 +74,6 @@ const genBaseStyle = token => {
+         flex: 1,
+         fontWeight: 'normal',
+         position: 'relative',
+-        userSelect: 'none'
+       }, textEllipsis), {
+         // https://github.com/ant-design/ant-design/issues/40421
+         [`> ${antCls}-typography`]: {
+diff --git a/lib/select/style/index.js b/lib/select/style/index.js
+index 94e4f168e64e6aee65a4f8d9249fec839f39568d..33971b024501202f4aa33e1595323c9e119775e5 100644
+--- a/lib/select/style/index.js
++++ b/lib/select/style/index.js
+@@ -81,7 +81,6 @@ const genBaseStyle = token => {
+         flex: 1,
+         fontWeight: 'normal',
+         position: 'relative',
+-        userSelect: 'none'
+       }, _style.textEllipsis), {
+         // https://github.com/ant-design/ant-design/issues/40421
+         [`> ${antCls}-typography`]: {

@@ -1,30 +1,58 @@
-# React + TypeScript + Vite
+### 1. pnpm patch antd
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```console
+╭─root@HP ~/personal/antd-select-copiable ‹master›
+╰─# pnpm patch antd
+You can now edit the following folder: /tmp/e783e387c49ac2b86aeb04c9235729e8
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Once you're done with your changes, run "pnpm patch-commit /tmp/e783e387c49ac2b86aeb04c9235729e8"
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 2. open folder and edit code
+
+```console
+code /tmp/e783e387c49ac2b86aeb04c9235729e8
+```
+
+find `https://github.com/ant-design/ant-design/issues/40421`,  
+delete code `userSelect: 'none'`
+
+### 3. pnpm patch-commit antd
+
+```console
+pnpm patch-commit /tmp/e783e387c49ac2b86aeb04c9235729e8
+```
+
+### 4. pnpm patch rc-select
+
+```console
+╭─root@HP ~/personal/antd-select-copiable ‹master●›
+╰─# pnpm patch rc-select
+You can now edit the following folder: /tmp/e2859d70b36cfa97375a194ae4ea0db0
+
+Once you're done with your changes, run "pnpm patch-commit /tmp/e2859d70b36cfa97375a194ae4ea0db0"
+```
+
+### 5. open folder and edit code
+
+```console
+code /tmp/e2859d70b36cfa97375a194ae4ea0db0
+```
+
+find `if (event.target !== inputRef.current && !inputMouseDown && !( 'combobox' && disabled)) `
+
+replace to `if (event.target !== inputRef.current && !inputMouseDown && !disabled) `
+
+### 6. pnpm patch-commit rc-select
+
+```console
+pnpm patch-commit /tmp/e2859d70b36cfa97375a194ae4ea0db0
+```
+
+### 7. remove vite cache
+
+```console
+rm -rf node_modules/.vite
+```
+
+### 8. restart dev server and see if it's successful.

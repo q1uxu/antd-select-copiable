@@ -1,0 +1,26 @@
+diff --git a/es/Selector/index.js b/es/Selector/index.js
+index 543624d1a3c41f9af810bb0e5476f1fa546d4e05..cd024da723b15c906cdab3247b26fb2937d871e2 100644
+--- a/es/Selector/index.js
++++ b/es/Selector/index.js
+@@ -131,7 +131,7 @@ var Selector = function Selector(props, ref) {
+     // when mode is combobox and it is disabled, don't prevent default behavior
+     // https://github.com/ant-design/ant-design/issues/37320
+     // https://github.com/ant-design/ant-design/issues/48281
+-    if (event.target !== inputRef.current && !inputMouseDown && !(mode === 'combobox' && disabled)) {
++    if (event.target !== inputRef.current && !inputMouseDown && !disabled) {
+       event.preventDefault();
+     }
+     if (mode !== 'combobox' && (!showSearch || !inputMouseDown) || !open) {
+diff --git a/lib/Selector/index.js b/lib/Selector/index.js
+index 5a0c2b6511678c9016d2755aa66610fb4cdd90f8..fb7f58742bb1ff1ba5b31ac871f8fa5dbb162a43 100644
+--- a/lib/Selector/index.js
++++ b/lib/Selector/index.js
+@@ -141,7 +141,7 @@ var Selector = function Selector(props, ref) {
+     // when mode is combobox and it is disabled, don't prevent default behavior
+     // https://github.com/ant-design/ant-design/issues/37320
+     // https://github.com/ant-design/ant-design/issues/48281
+-    if (event.target !== inputRef.current && !inputMouseDown && !(mode === 'combobox' && disabled)) {
++    if (event.target !== inputRef.current && !inputMouseDown && !disabled) {
+       event.preventDefault();
+     }
+     if (mode !== 'combobox' && (!showSearch || !inputMouseDown) || !open) {
