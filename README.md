@@ -1,3 +1,5 @@
+## Here are the steps to fix ant design [`Select` component not copiable issue](https://github.com/ant-design/ant-design/issues/28989) using pnpm patch.
+
 ### 1. pnpm patch antd
 
 ```console
